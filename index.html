@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Pokemon Rock Paper Scissors</title>
+		<!-- linked style sheets and fonts -->
+		<link href="css/styles.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<header>
+			<div id="title">
+				<h1>
+				<span class="fire">Fire</span>
+				<span class="water">Water</span>
+				<span class="grass">Grass</span>
+				</h1>
+				<p>Choose your element - first to 5 wins!</p>
+			</div>
+		</header>
+		<main class="container">
+			
+			<section id="game">
+				<div id="fire">
+					<img id ="poke1" src="images/charmander.png" alt="Charmander - Fire">
+				</div>
+				<div id="grass">
+					<img id="poke2" src="images/bulbasaur.png" alt="Bulbasaur - Grass">
+				</div>
+				<div id="water">
+					<img id="poke3" src="images/squirtle.png" alt="Squirtle - Water">
+				</div>
+			</section>
+			<div id="results-box">
+				<span id="results">The results will show here. Let's go!</span>
+			</div>
+			<div id="score">
+				<p>You: <span id="player-score">0</span><br> Me: <span id="computer-score">0</span>
+			</p>
+		</div>
+	</main>
+	<footer>
+		<div>
+			<p>Click Pikachu to Reset the game!</p>
+			<img id="reset" src="images/pika1.png" alt="Psyduck">
+		</div>
+	</footer>
+	<script src="js/app.js" type="text/javascript"></script>
+</body>
+</html>

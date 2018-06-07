@@ -1,0 +1,120 @@
+@font-face {
+    font-weight: normal;
+    font-style: normal;
+    font-family: 'Pokemon Solid';
+    src: url('fonts/Pokemon Solid.eot');
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: "Courier", serif;
+    font-size: 25px;
+    background: radial-gradient(circle, white, aqua);
+}
+
+/* title */
+header div {
+    text-align: center;
+    padding: 15px;
+    margin: 0, auto;
+}
+
+h1 {
+    font-family: "Pokemon Solid", serif;
+    font-size: 65px;
+}
+
+.fire {
+    color: red;
+}
+
+.water {
+    color: blue;
+}
+
+.grass {
+    color: green;
+}
+
+/* game & score */
+main {
+    width: 100%;
+}
+
+section {
+    display: inline;
+    text-align: center;
+    margin: 0 auto;
+    clear: both;
+}
+
+main section img {
+    width: auto;
+    height: auto;
+    max-width: 250px;
+    max-height: 250px;
+    margin: 10px auto;
+}
+
+#fire {
+    float: left;
+    margin-left: 40px;
+    padding-left: 100px;
+}
+
+#grass {
+    float: right;
+    margin-left: 40px;
+    padding-right: 100px;
+}
+
+#results-box {
+    text-align: center;
+    max-width: 500px;
+    max-height: 600px;
+    padding: 20px 0;
+    margin: 0 auto;
+}
+
+#score {
+    text-align: center;
+    margin: 10px;
+}
+
+#score p {
+    display: inline;
+    padding-top: 20px;
+}
+
+/* reset */
+footer {
+    width: 100%;
+    left: 0;
+    right: 0;
+    margin-top: 70px;
+    padding-bottom: -20px;
+    text-align: right;
+}
+
+footer p {
+    display: inline;
+}
+
+footer img {
+    width: auto;
+    height: auto;
+    max-width: 1500px;
+    max-height: 150px;
+}
+
+/* hover effects */
+main section img:hover {
+    cursor: url('../images/pokeball.png'), pointer;
+}
+
+footer img:hover {
+    cursor: url('../images/pokeball.png'), pointer;
+}

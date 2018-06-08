@@ -17,22 +17,12 @@ const computerSelection = () => {
 	}
 }
 
-const checkSelections = (player, computer) => {
-	if (player === computer) {
-		showResults(player, computer, "tie");
-		return;
-	} else if (player == "fire" && computer == "grass") {
-		showResults(player, computer, "win");
-		return;
-	} else if (player == "water" && computer == "fire") {
-		showResults(player, computer, "win");
-		return;
-	} else if (player == "grass" && computer == "water") {
-		showResults(player, computer, "win");
-		return;
-	} else {
-		showResults(player, computer, "lose");
-	}
+const checkSelections = (player, computer) => { 
+		return (player === computer ?  
+		showResults(player, computer, "tie") : player == "fire" && computer == "grass" ?
+		showResults(player, computer, "win") : player == "water" && computer == "fire" ? 
+		showResults(player, computer, "win") : player == "grass" && computer == "water" ? 
+		showResults(player, computer, "win") : showResults(player, computer, "lose"));
 }
 
 const showResults = (player, computer, outcome) => {
@@ -55,13 +45,11 @@ const showResults = (player, computer, outcome) => {
 }
 
 const updateScore = (whichScore) => {
-	if (whichScore == "player") {
-		playerScore++;
-		document.getElementById("player-score").innerHTML = playerScore;
-	} else {
-		computerScore++;
-		document.getElementById("computer-score").innerHTML = computerScore;
-	}
+	whichScore == "player" ? 
+		(playerScore++,
+		document.getElementById("player-score").innerHTML = playerScore) :
+		(computerScore++,
+		document.getElementById("computer-score").innerHTML = computerScore);
 
 	setTimeout(checkWin, 500);
 }
@@ -91,29 +79,21 @@ const toggleImages = () => {
 	let poke3 = document.getElementById("poke3");
 	let reset = document.getElementById("reset");
 
-	if (reset.getAttribute("src") == "images/pika1.png") {
-		reset.setAttribute("src", "images/pika2.png");
-	} else {
+	reset.getAttribute("src") == "images/pika1.png" ?
+		reset.setAttribute("src", "images/pika2.png") :
 		reset.setAttribute("src", "images/pika1.png");
-	}
 
-	if (poke1.getAttribute("src") == "images/charmander.png") {
-		poke1.setAttribute("src", "images/torchic.png");
-	} else {
-		poke1.setAttribute("src", "images/charmander.png")
-	}
+	poke1.getAttribute("src") == "images/charmander.png" ?
+		poke1.setAttribute("src", "images/torchic.png") :
+		poke1.setAttribute("src", "images/charmander.png");
 
-	if (poke2.getAttribute("src") == "images/bulbasaur.png") {
-		poke2.setAttribute("src", "images/treeko.png");
-	} else {
-		poke2.setAttribute("src", "images/bulbasaur.png")
-	}
+	poke2.getAttribute("src") == "images/bulbasaur.png" ?
+		poke2.setAttribute("src", "images/treeko.png") :
+		poke2.setAttribute("src", "images/bulbasaur.png");
 
-	if (poke3.getAttribute("src") == "images/squirtle.png") {
-		poke3.setAttribute("src", "images/mudkip.png");
-	} else {
-		poke3.setAttribute("src", "images/squirtle.png")
-	}
+	poke3.getAttribute("src") == "images/squirtle.png" ?
+		poke3.setAttribute("src", "images/mudkip.png") :
+		poke3.setAttribute("src", "images/squirtle.png");
 
 }
 
